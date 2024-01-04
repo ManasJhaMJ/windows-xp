@@ -22,3 +22,12 @@ var date = new Date();
 var am_pm = date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 var current_time = am_pm;
 document.getElementById("time").innerHTML = current_time;
+
+
+document.querySelector('.remove-notepad-btn').addEventListener('click', () => {
+    document.querySelector('#notepad').classList.add('notepad-hidden');
+});
+
+document.querySelector('.add-notepad-btn').addEventListener('click', () => {
+    document.querySelector('#notepad').classList.remove('notepad-hidden');
+});
